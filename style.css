@@ -8,3 +8,8 @@ body {
 ul li {
   margin-bottom: 10px;
 }
+
+li.line_through {
+  text-decoration: line-through;
+  color: green;
+}

@@ -1123,7 +1123,7 @@ let founded = null;
 
 // founded = data.find(item => (item._id = "5e652aa642281be3552ea326"));
 
-founded = data.find(item => item.age > 3000);
+founded = data.find(item => item.age > 30);
 // console.log(founded);
 
 // findIndex()
@@ -1184,4 +1184,51 @@ founded = data.map(item => {
     long: item.longitude
   };
 });
-console.log(founded);
+// console.log(founded);
+
+// forEach...
+// find(), findIndex()
+
+// data.forEach(item => {
+//   if (item.age > 30) {
+//     console.log("item", item);
+//   }
+// });
+
+for (let i = 0; i <= data.length - 1; i++) {
+  if (data[i].age > 30) {
+    // console.log("item", data[i], i);
+    break;
+  }
+}
+
+// filter()
+
+let filtered = [];
+data.forEach(item => {
+  // console.log("item", item);
+  if (item.age > 30) {
+    filtered.push(item);
+  }
+});
+// console.log("filtered", filtered);
+
+// map()
+
+filtered = [];
+data.forEach(item => {
+  // console.log("item", item);
+  filtered.push({
+    name: item.name,
+    phone: item.phone
+  });
+});
+
+filtered = data.map(item => {
+  return {
+    name: item.name,
+    phone: item.phone
+  };
+});
+
+console.log("filtered", filtered);
